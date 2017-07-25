@@ -43,9 +43,10 @@ for row in fields:
 conn.close()
 
 # Here, have some JSON
-print(json.dumps(fieldmap, indent=4, sort_keys=True))
+myjson = json.dumps(fieldmap, indent=4, sort_keys=True)
+print(myjson)
 
 # Write it to a file
 fo = open(parms['outputfile'],"w")
-fo.write(json.dumps(fieldmap, indent=4, sort_keys=True))
+fo.write(myjson)
 fo.close()
