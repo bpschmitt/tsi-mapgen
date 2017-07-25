@@ -44,3 +44,8 @@ conn.close()
 
 # Here, have some JSON
 print(json.dumps(fieldmap, indent=4, sort_keys=True))
+
+# Write it to a file
+fo = open(parms['outputfile'],"w")
+fo.write(json.dumps(fieldmap, indent=4, sort_keys=True))
+fo.close()

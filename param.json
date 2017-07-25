@@ -1,5 +1,6 @@
 {
 	"server": "servername",
 	"user": "username",
-	"password": "password"
+	"password": "password",
+	"outputfile":"incidentTemplate.json"
 }
