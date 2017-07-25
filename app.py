@@ -2,7 +2,7 @@ import json
 import re
 import pymssql
 
-with open('param.secret.json') as json_data:
+with open('param.json') as json_data:
     parms = json.load(json_data)
 
 fieldmap = {}
