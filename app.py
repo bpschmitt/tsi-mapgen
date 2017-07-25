@@ -31,6 +31,8 @@ for row in fields:
     # Skipping all the junk fields and adding the enumerations
     if re.match("[zZ][0-9][A-Z]",field):
         print("Skipping %s" % row[1])
+    elif re.match("z[G,D]",field):
+        print("Skipping %s" % row[1])
     else:
         print("Enumerating %s" % row[1])
         for enum in enums:
