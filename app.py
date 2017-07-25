@@ -18,6 +18,7 @@ schemaid = cursor.fetchone()[0]
 cursor.execute("select fieldId,fieldName from field where schemaId=%s order by fieldName" % schemaid)
 fields = cursor.fetchall()
 
+# Ok, now let's get the enum values
 for row in fields:
 
     thisrow = {}
@@ -27,11 +28,10 @@ for row in fields:
     enumerations = {}
 
     field = str(row[1])
-    # Skipping all the junk fields
+    # Skipping all the junk fields and adding the enumerations
     if re.match("[zZ][0-9][A-Z]",field):
         print("Skipping %s" % row[1])
     else:
-
         print("Enumerating %s" % row[1])
         for enum in enums:
             enumerations[enum[0]] = enum[1]
@@ -42,5 +42,5 @@ for row in fields:
 
 conn.close()
 
-# Let's print the json
+# Here, have some JSON
 print(json.dumps(fieldmap, indent=4, sort_keys=True))
