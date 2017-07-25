@@ -38,10 +38,9 @@ for row in fields:
 
         thisrow['fieldId'] = row[0]
         thisrow['valueMap'] = enumerations
-        fieldmap["@%s" % str(row[1]).upper()] = thisrow
+        fieldmap["@%s" % str(row[1]).upper().replace(" ","_")] = thisrow
 
-
+conn.close()
 
 # Let's print the json
 print(json.dumps(fieldmap, indent=4, sort_keys=True))
-conn.close()
