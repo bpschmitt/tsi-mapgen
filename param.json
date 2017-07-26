@@ -2,5 +2,6 @@
 	"server": "servername",
 	"user": "username",
 	"password": "password",
-	"outputfile":"incidentTemplate.json"
+	"mapfile":"map.json",
+	"propsfile":"properties.json"
 }
