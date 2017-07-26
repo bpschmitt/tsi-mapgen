@@ -9,7 +9,7 @@ fieldmap = {}
 props = {}
 properties = {}
 
-conn = pymssql.connect(parms['server'], parms['user'], parms['password'], "ARSystem")
+conn = pymssql.connect(parms['mssql_server'], parms['mssql_user'], parms['mssql_password'], parms['remedydb_name'])
 cursor = conn.cursor()
 
 # Get schemaId

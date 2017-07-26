@@ -1,7 +1,8 @@
 {
-	"server": "servername",
-	"user": "username",
-	"password": "password",
+	"mssql_server": "servername",
+	"mssql_user": "username",
+	"mssql_password": "password",
+	"remedydb_name": "ARSystem",
 	"mapfile":"map.json",
 	"propsfile":"properties.json"
 }
