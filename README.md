@@ -10,6 +10,7 @@ There are two files created:
 2) map.json - this contains the field mappings directly following the properties
 
 TODO: Modify the code to output a single json file!
+
 NOTE: This version only works with SQL Server based Remedy instances but can be adapted for Oracle pretty easily.
 
 #### Pre-Requisites
